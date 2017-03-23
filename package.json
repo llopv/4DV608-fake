@@ -1,0 +1,27 @@
+{
+  "name": "4DV608-fake",
+  "version": "0.0.1",
+  "description": "Fake server for the Advanced Software Design Project.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/llopv/4DV608-fake"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/nodeunit/bin/nodeunit test.js"
+  },
+  "author": "David Llop",
+  "license": "MIT",
+  "homepage": "https://easysign.galactic.network",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mocha": "^3.2.0",
+    "should": "^11.2.1",
+    "supertest": "^3.0.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "nodeunit": "^0.11.0"
+  }
+}
