@@ -12,7 +12,7 @@ var invalidCredentials = (req, res) => {
 }
 
 app.get('/fake', (req, res) => {
-  res.json({version: 1})
+  res.json({version: 1, revision: 1})
 })
 
 app.post('/fake/register', (req, res) => {
@@ -37,7 +37,7 @@ app.post('/fake/register/:uuid', (req, res) => {
 })
 
 app.post('/fake/login', (req, res) => {
-  if (!req.body.email || !req.body.password) {
+  if (!req.body.user || !req.body.user.email || !req.body.user.password) {
     res.status(401).json({error: "Invalid credentials"})
     return
   }

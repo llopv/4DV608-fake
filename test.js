@@ -96,8 +96,10 @@ describe('Routes', () => {
     it('should return an error if invalid credentails', invalidCredentials('/fake/login'))
     it('should return a token and the uuid if correct credentials', (done) => {
       let body = {
-        email: "test@easysign.com",
-        password: "password"
+        user: {
+          email: "test@easysign.com",
+          password: "password"
+        }
       }
       request(app)
         .post('/fake/login')
