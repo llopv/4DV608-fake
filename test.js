@@ -21,7 +21,7 @@ describe('Routes', () => {
 	      .get('/fake')
         .expect(200)
 	      .then((res) => {
-          (res.body).should.be.deepEqual({version: 1})
+          (res.body).should.has.property('version', 1)
           done()
         })
     })
